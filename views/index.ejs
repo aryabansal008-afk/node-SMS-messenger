@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMS Messaging</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/tabler-icons.min.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<div class="page-wrap">
+
+  <div class="left">
+    <div class="left-glow"></div>
+    <div class="left-glow2"></div>
+    <div class="grid-lines"></div>
+    <div class="deco-ring ring1"></div>
+    <div class="deco-ring ring2"></div>
+    <div class="deco-ring ring3"></div>
+    <div class="center-icon"><i class="ti ti-message-2"></i></div>
+
+    <div class="left-brand">
+      <div class="logo-badge">
+        <div class="logo-dot"></div>
+        <span class="logo-text">SMS Gateway</span>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <p class="testimonial-quote">
+        Instant, reliable SMS delivery.
+      </p>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="right-brand">
+      <span class="g">ARYA</span> <span class="d">BANSAL</span>
+    </div>
+
+    <h1>Send a Message</h1>
+    <p class="subtitle">Enter a phone number and your text to send via the SMS portal.</p>
+
+    <div class="field">
+      <label for="phoneno">Phone number</label>
+      <input type="tel" id="phoneno" name="number" placeholder="91 98765 43210" autocomplete="tel">
+      <div class="field-footer">
+        <span class="field-hint">Include country code, e.g. +91</span>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="msg">Message</label>
+      <textarea id="msg" name="text" rows="4" maxlength="160"
+        placeholder="Type your SMS message here…"
+        oninput="document.getElementById('cc').textContent = this.value.length + '/160'"></textarea>
+      <div class="field-footer">
+        <span class="char-count" id="cc">0/160</span>
+      </div>
+    </div>
+
+    <button class="btn-send" id="btn" type="button">
+      <i class="ti ti-send"></i>
+      Send 
+    </button>
+
+    <div class="divider">
+      <hr><span>Delivery Status</span><hr>
+    </div>
+
+    <div class="status-row">
+      <div class="status-dot idle" id="statusDot"></div>
+      <span id="statusText">Waiting to send…</span>
+    </div>
+
+    <p class="response">
+    </p>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/javascripts/main.js"></script>
+<script src="/javascripts/herosection.js"></script>
+
+</body>
+</html>
+
+    
+  
+
+
+  
